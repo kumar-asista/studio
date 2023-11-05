@@ -186,7 +186,7 @@ export class HTTPServer {
     process.USE_JWT_COOKIES = yn(botpressConfig.jwtToken.useCookieStorage) || false
 
     /**
-     * The loading of language models can take some time, access to Botpress is disabled until it is completed
+     * The loading of language models can take some time, access to AsistaBot is disabled until it is completed
      * During this time, internal calls between modules can be made
      */
     this.app.use((req, res, next) => {
@@ -200,7 +200,7 @@ export class HTTPServer {
           return res
             .status(503)
             .send(
-              '<html><head><meta http-equiv="refresh" content="2"> </head><body>Botpress is loading. Please try again in a minute.</body></html>'
+              '<html><head><meta http-equiv="refresh" content="2"> </head><body>AsistaBot is loading. Please try again in a minute.</body></html>'
             )
         }
       }
@@ -264,7 +264,7 @@ export class HTTPServer {
       const errorCode = err.errorCode
       const message = err.message || err || 'Unexpected error'
       const details = err.details || ''
-      const docs = err.docs || 'https://botpress.com/docs'
+      const docs = err.docs || 'https://asista.com/'
       const devOnly = process.IS_PRODUCTION ? {} : { showStackInDev: true, stack: err.stack, full: err.message }
 
       res.status(statusCode).json({

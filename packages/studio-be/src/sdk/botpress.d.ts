@@ -1,5 +1,5 @@
 /**
- * This is the official Botpress SDK, designed to help our fellow developers to create wonderful modules and
+ * This is the official AsistaBot SDK, designed to help our fellow developers to create wonderful modules and
  * extend the world's best chatbot functionality to make it even better! Your module will receives an instance of
  * this SDK (Yes, all those beautiful features!) to kick start your development. Missing something important?
  * Please let us know in our official Github Repo!
@@ -51,12 +51,12 @@ declare module 'botpress/sdk' {
   export type KnexExtended = Knex & KnexExtension
 
   /**
-   * Returns the current version of Botpress
+   * Returns the current version of AsistaBot
    */
   export const version: string
 
   /**
-   * This variable gives you access to the Botpress database via Knex.
+   * This variable gives you access to the AsistaBot database via Knex.
    * When developing modules, you can use this to create tables and manage data
    * @example bp.database('srv_channel_users').insert()
    */
@@ -182,7 +182,7 @@ declare module 'botpress/sdk' {
     name: string
     /** Gives a short description of your module, which is displayed once the template is selected */
     desc: string
-    /** These are used internally by Botpress when they are registered on startup */
+    /** These are used internally by AsistaBot when they are registered on startup */
     readonly moduleId?: string
     readonly moduleName?: string
   }
@@ -384,7 +384,7 @@ declare module 'botpress/sdk' {
       export const SKIP_DIALOG_ENGINE: symbol
       /** When this flag is active, the QNA module won't intercept this event */
       export const SKIP_QNA_PROCESSING: symbol
-      /** When this flag is active, Botpress Native NLU will not process this event */
+      /** When this flag is active, AsistaBot Native NLU will not process this event */
       export const SKIP_NATIVE_NLU: symbol
       /** When this flag is active, the Event State is persisted even if the dialog engine is skipped */
       export const FORCE_PERSIST_STATE: symbol
@@ -410,7 +410,7 @@ declare module 'botpress/sdk' {
     }
 
     /**
-     * A BotpressEvent is how conversational channels interact with Botpress. Events represent all the interactions
+     * A BotpressEvent is how conversational channels interact with AsistaBot. Events represent all the interactions
      * that make up a conversation. That means the different message types (text, image, buttons, carousels etc) but also
      * the navigational events (chat open, user typing) and contextual events (user returned home, order delivered).
      */
@@ -555,7 +555,7 @@ declare module 'botpress/sdk' {
        * There is a possible race condition since it is loaded each time a messages comes in. Update it wisely
        */
       bot: any
-      /** Used internally by Botpress to keep the user's current location and upcoming instructions */
+      /** Used internally by AsistaBot to keep the user's current location and upcoming instructions */
       context?: DialogContext
       /** This variable points to the currently active workflow */
       workflow: WorkflowHistory
@@ -1093,7 +1093,7 @@ declare module 'botpress/sdk' {
   export interface FlowGenerationResult {
     /**
      * A partial flow originating from a skill flow generator. Missing pieces will be automatically added
-     * once the flow is sent to Botpress, the final product will be a Flow.
+     * once the flow is sent to AsistaBot, the final product will be a Flow.
      */
     flow: SkillFlow
     /** An array of possible transitions for the parent node */
@@ -1319,7 +1319,7 @@ declare module 'botpress/sdk' {
     inversify: any
   }
 
-  /** These are additional information that Botpress may pass down to migrations (for ex: running bot-specific migration) */
+  /** These are additional information that AsistaBot may pass down to migrations (for ex: running bot-specific migration) */
   export interface MigrationMetadata {
     botId?: string
   }
@@ -2169,7 +2169,7 @@ declare module 'botpress/sdk' {
    */
   export namespace security {
     /**
-     * Creates a message signature, which can be used as proof that the message was created on Botpress backend
+     * Creates a message signature, which can be used as proof that the message was created on AsistaBot backend
      * You can call this method twice to verify the authenticity of a message
      */
     export function getMessageSignature(message: string): Promise<string>
@@ -2240,12 +2240,12 @@ declare module 'botpress/sdk' {
         /**
          * Creates a mapping of ids for a conversation in a given channel
          * @param channel The channel for which to create the mapping
-         * @param localId The id of the conversation in botpress
+         * @param localId The id of the conversation in asista
          * @param foreignId The id of the conversation in that channel
          * @example
          * // I have been given an conversation id by facebook messenger
          * const messengerConversationId = 134314
-         * // Let's say I have an already existing botpress conversation somewhere that I want to attach to this conversation
+         * // Let's say I have an already existing asista conversation somewhere that I want to attach to this conversation
          * const conversationId = '00001337-ca79-4235-8475-3785e41eb2be'
          *
          * // Create the mapping

@@ -382,7 +382,7 @@ class ConfigView extends Component<Props, State> {
                   <InputGroup
                     id="website"
                     leftIcon="globe"
-                    placeholder="https://botpress.com"
+                    placeholder="https://asista.com"
                     name="website"
                     value={this.state.website}
                     onChange={this.handleInputChanged}
@@ -412,7 +412,7 @@ class ConfigView extends Component<Props, State> {
                   <InputGroup
                     id="terms-conditions"
                     name="termsConditions"
-                    placeholder="https://botpress.com/terms"
+                    placeholder="https://asista.com/"
                     value={this.state.termsConditions}
                     onChange={this.handleInputChanged}
                   />

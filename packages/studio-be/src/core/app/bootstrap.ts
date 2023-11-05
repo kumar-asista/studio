@@ -101,7 +101,7 @@ async function start() {
     process.LOADED_MODULES[loadedModule.entryPoint.definition.name] = loadedModule.moduleLocation
   }
 
-  showBanner({ title: 'Botpress Studio', version: process.STUDIO_VERSION, logScopeLength: 9, bannerWidth: 75, logger })
+  showBanner({ title: 'AsistaBot Studio', version: process.STUDIO_VERSION, logScopeLength: 9, bannerWidth: 75, logger })
 
   if (!fs.existsSync(process.APP_DATA_PATH)) {
     try {
@@ -109,7 +109,7 @@ async function start() {
     } catch (err) {
       logger.attachError(err).error(
         `Could not find/create APP_DATA folder "${process.APP_DATA_PATH}".
-Please make sure that Botpress has the right to access this folder or change the folder path by providing the 'APP_DATA_PATH' env variable.
+Please make sure that AsistaBot has the right to access this folder or change the folder path by providing the 'APP_DATA_PATH' env variable.
 This is a fatal error, process will exit.`
       )
 
@@ -128,7 +128,7 @@ This is a fatal error, process will exit.`
   }
 
   await app.botpress.start({ modules: loadedModules.map((m) => m.entryPoint) }).catch((err) => {
-    logger.attachError(err).error('Error starting Botpress Studio')
+    logger.attachError(err).error('Error starting AsistaBot Studio')
 
     if (!process.IS_FAILSAFE) {
       process.exit(1)

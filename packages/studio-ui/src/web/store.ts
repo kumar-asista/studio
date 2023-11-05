@@ -6,7 +6,7 @@ import reducers from './reducers'
 
 const composeEnhancers =
   typeof window === 'object' && window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__
-    ? window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__({ name: 'Botpress', actionCreators: actions })
+    ? window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__({ name: 'AsistaBot', actionCreators: actions })
     : compose
 
 const enhancer = composeEnhancers(applyMiddleware(thunk))

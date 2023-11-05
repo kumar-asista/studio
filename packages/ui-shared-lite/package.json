@@ -1,7 +1,7 @@
 {
   "name": "@botpress/ui-shared-lite",
   "version": "1.0.0",
-  "author": "Botpress",
+  "author": "AsistaBot",
   "dependencies": {
     "classnames": "^2.3.1",
     "js-cookie": "^2.2.1",

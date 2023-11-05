@@ -11,7 +11,7 @@ import metadata from './metadata.json'
 
 const printPlainError = (err) => {
   /* eslint-disable no-console */
-  console.log('Error starting botpress')
+  console.log('Error starting asistabot studio ')
   console.log(err)
   console.log(err.message)
   console.log('---STACK---')
@@ -93,11 +93,11 @@ try {
   require('yargs')
     .command(
       ['serve', '$0'],
-      'Start your botpress server',
+      'Start your asista studio server',
       {
         dataFolder: {
           alias: ['d', 'data'],
-          description: 'Starts Botpress in standalone mode on that specific data folder',
+          description: 'Starts AsistaBot in standalone mode on that specific data folder',
           type: 'string'
         }
       },

@@ -233,7 +233,7 @@ if (process.argv.find(x => x.toLowerCase() === '--analyze')) {
 const showNodeEnvWarning = () => {
   if (!isProduction) {
     console.log(
-      chalk.yellow('WARNING: You are currently building Botpress in development; NOT generating a production build')
+      chalk.yellow('WARNING: You are currently building AsistaBot in development; NOT generating a production build')
     )
     console.log(chalk.yellow('Run with NODE_ENV=production to create a production build instead'))
   }

@@ -159,7 +159,7 @@ export interface BotpressConfig {
     }
     /**
      * Adds default headers to the server's responses
-     * @default {"X-Powered-By":"Botpress"}
+     * @default {"X-Powered-By":"AsistaBot"}
      */
     headers: { [name: string]: string }
   }
@@ -172,7 +172,7 @@ export interface BotpressConfig {
       studio: {
         /**
          * Change the name displayed in the title bar on the studio
-         * @example "Botpress Studio"
+         * @example "AsistaBot Studio"
          */
         title?: string
         /**
