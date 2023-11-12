@@ -61,7 +61,7 @@
     "packages/*"
   ],
   "engines": {
-    "node": "12.18"
+    "node": "^12"
   },
   "packageManager": "yarn@3.1.1"
 }
