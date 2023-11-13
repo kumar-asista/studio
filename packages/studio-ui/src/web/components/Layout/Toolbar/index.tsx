@@ -23,8 +23,8 @@ type StateProps = ReturnType<typeof mapStateToProps>
 type Props = StateProps & OwnProps
 //const FORUM_LINK = 'https://discord.gg/botpress'
 //const DOCS_LINK = 'https://v12.botpress.com/'
-const FORUM_LINK = ''
-const DOCS_LINK = ''
+const FORUM_LINK = 'https://asista.com'
+const DOCS_LINK = 'https://asista.com'
 
 const Toolbar: FC<Props> = (props) => {
   const { toggleDocs, toggleGuidedTour, hasDoc, onToggleEmulator, isEmulatorOpen, toggleBottomPanel } = props

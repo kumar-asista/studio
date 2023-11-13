@@ -116,7 +116,8 @@ const Layout: FC<Props> = (props: Props) => {
     e.preventDefault()
 
     if (props.docHints.length) {
-      window.open(`https://botpress.com/docs/${props.docHints[0]}`, '_blank')
+      //window.open(`https://botpress.com/docs/${props.docHints[0]}`, '_blank')
+      window.open(`https://asista.com`, '_blank')
     }
   }
 
