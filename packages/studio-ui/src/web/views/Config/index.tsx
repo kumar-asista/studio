@@ -402,7 +402,7 @@ class ConfigView extends Component<Props, State> {
                   <InputGroup
                     id="email-address"
                     leftIcon="envelope"
-                    placeholder="email@botpress.com"
+                    placeholder="email@asista.com"
                     name="emailAddress"
                     value={this.state.emailAddress}
                     onChange={this.handleInputChanged}
@@ -412,7 +412,7 @@ class ConfigView extends Component<Props, State> {
                   <InputGroup
                     id="terms-conditions"
                     name="termsConditions"
-                    placeholder="https://asista.com/"
+                    placeholder="https://www.asista.com/terms-of-service/"
                     value={this.state.termsConditions}
                     onChange={this.handleInputChanged}
                   />
@@ -420,7 +420,7 @@ class ConfigView extends Component<Props, State> {
                 <FormGroup label={lang.tr('config.linkToPolicy')} labelFor="privacy-policy">
                   <InputGroup
                     id="privacy-policy"
-                    placeholder="https://botpress.com/privacy-policy"
+                    placeholder="https://www.asista.com/privacy-policy/"
                     name="privacyPolicy"
                     value={this.state.privacyPolicy}
                     onChange={this.handleInputChanged}
