@@ -174,10 +174,13 @@ export class StudioRouter extends CustomRouter {
         const workspaceId = await this.workspaceService.getBotWorkspaceId(botId)
         const commonEnv = await this.httpServer.getCommonEnv()
 
+        //const segmentWriteKey = process.core_env.BP_DEBUG_SEGMENT
+        //  ? 'OzjoqVagiw3p3o1uocuw6kd2YYjm6CHi' // Dev key from Segment
+        //  : '7lxeXxbGysS04TvDNDOROQsFlrls9NoY' // Prod key from Segment
         const segmentWriteKey = process.core_env.BP_DEBUG_SEGMENT
-          ? 'OzjoqVagiw3p3o1uocuw6kd2YYjm6CHi' // Dev key from Segment
-          : '7lxeXxbGysS04TvDNDOROQsFlrls9NoY' // Prod key from Segment
-
+          ? 'cgjGlmrGSawXbBJwA8BNdIuisBUfx1jF' // Dev key from Segment
+          : 'cgjGlmrGSawXbBJwA8BNdIuisBUfx1jF' // Prod key from Segment  
+          
         const totalEnv = {
           ...commonEnv,
           STUDIO_VERSION: process.STUDIO_VERSION,

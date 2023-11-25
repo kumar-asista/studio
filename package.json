@@ -2,8 +2,8 @@
   "name": "@botpress/studio",
   "version": "0.0.68",
   "description": "Create your virtual assistants",
-  "repository": "https://github.com/botpress/studio.git",
-  "author": "Botpress, Inc.",
+  "repository": "https://github.com/cherrylabstech/bot-studio.git",
+  "author": "Asista, Inc.",
   "license": "AGPL-3.0",
   "scripts": {
     "build": "yarn clean && yarn workspaces foreach -ptiv run build",
