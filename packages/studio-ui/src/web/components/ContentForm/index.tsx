@@ -32,7 +32,7 @@ interface Props {
 }
 
 const CustomBaseInput = (props: WidgetProps) => {
-  const SUPPORTED_MEDIA_SUBTYPES: SupportedFileType[] = ['audio', 'image', 'video', 'file']
+  const SUPPORTED_MEDIA_SUBTYPES: SupportedFileType[] = ['audio', 'image', 'video', 'file','application']
   const { type, $subtype: subtype } = props.schema as Schema
   const { readonly } = props.options
 
@@ -97,6 +97,7 @@ const CustomDescriptionField = ({ description, id, formContext }: FieldProps) =>
     audio: ['channel-web', 'channel-vonage'],
     video: ['channel-web', 'channel-vonage'],
     file: ['channel-web', 'channel-vonage'],
+    application: ['channel-web', 'channel-vonage'],
     location: ['channel-vonage']
   }
 

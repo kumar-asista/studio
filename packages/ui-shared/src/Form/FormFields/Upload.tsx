@@ -71,8 +71,14 @@ const Upload: FC<UploadFieldProps> = (props) => {
     if (filter) {
       return filter
     } else if (type) {
+      //if(type === 'xlsx'){
+      //  return 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet'
+      //}else if(type === 'xls'){
+      //  return 'application/vnd.ms-excel'
+      //}else{
       // e.g. video/*, audio/*, ...
       return `${type}/*`
+      //}
     } else {
       ;('*')
     }

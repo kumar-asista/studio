@@ -54,6 +54,15 @@ const FileDisplay: FC<FileDisplayProps> = (props) => {
           </a>
         </div>
       )
+      case 'application':
+        return (
+          <div className={style.fileWrapper}>
+            <div className={style.fileWrapperActions}>{deletable && deletableFile()}</div>
+            <a href={fullUrl} target="_blank" className={style.fileWrapperFile}>
+              {filename}
+            </a>
+          </div>
+        )  
     default:
       return null
   }
